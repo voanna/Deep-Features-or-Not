@@ -5,7 +5,7 @@ We provide instructions on how to reproduce the tables in the paper
 Part of the experiments rely on data and code provided by Glasner et. al.
 Command-line caffe is a dependency as well
 
-voanna@vision.ee.ethz.ch
+voanna AT vision.ee.ethz.ch
 
 Directory Structure
 ===================
