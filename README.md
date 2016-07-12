@@ -7,18 +7,17 @@ Command-line caffe is a dependency as well
 
 voanna AT vision.ee.ethz.ch
 
-Directory Structure
-===================
-- Experiments
+#Directory Structure
+## Experiments
 experiments/finetune-temperature
 experiments/time-prediction
 experiments/finetune-time
 
-- Utility functions
+## Utility functions
 src/
 HONHelpers.py is the utility module.  The paths should be set there first
 
--VGG16 caffemodel weights and prototxt
+##VGG16 caffemodel weights and prototxt
 VGG16/
 
 To get the source code and the caffemodels that the scripts use, first download the compressed caffemodels from data.vision.ee.ethz.ch/voanna/TimePrediction/caffemodels.tgz, which already have the correct directory structure
@@ -26,22 +25,21 @@ To get the source code and the caffemodels that the scripts use, first download 
 Then clone the sources from github into the directory containing the large files
 (http://stackoverflow.com/questions/2411031/how-do-i-clone-into-a-non-empty-directory)
 
-- Data
+## Data
 For data, create a subdirectory called data, and place datasets in following directories:
 
-Hot or Not Temperature Dataset
+###Hot or Not Temperature Dataset
 data/hot_or_not/data <- download data from Glasner et al.
       http://cgm.technion.ac.il/Computer-Graphics-Multimedia/Software/HotOrNot/resources/data/data.tar.gz
 
-Time of Year Dataset (ours)
+###Time of Year Dataset (ours)
 data/CVL_cams <- our dataset, download from data.vision.ee.ethz.ch/voanna/TimePrediction/data/CVL_cams.tgz
 
-Time of Year Webcam from AMOS (used for the final finetuning experiment, 4.4 years worth of images)
+###Time of Year Webcam from AMOS (used for the final finetuning experiment, 4.4 years worth of images)
 data/AMOS/00017603 <- data downloaded from AMOS database (http://amos.cse.wustl.edu/) but cleaned
 	download from data.vision.ee.ethz.ch/voanna/TimePrediction/data/AMOS/00017603.tgz
 
-Table 2
-=======
+#Table 2
 experiments/finetune-temperature/
 
 For this experiment, we first finetune VGG-16, extract features and then compute the performance of these features.  Each of these steps is explained below.
@@ -70,13 +68,11 @@ This script is written to be run on a grid-compute system as there are many SVMs
 After all the jobs are done, the individual results will be assembled into a table when running with 
 python finetuning_hon_performance.py 1 temperature-classification svr --table 2
 
-Table 3
-=======
+#Table 3
 In table 3, we use the same results as computed in Table 2, so just run 
 python finetuning_hon_performance.py 1 temperature-classification svm --table 3
 
-Table 7
-=======
+#Table 7
 experiments/time-prediction/
 Extract features using extract_features_time_prediction.py
 To compute the R^2/RMSE, results are computed with run finetuning_hon_performance.py with 
@@ -85,15 +81,13 @@ python finetuning_hon_performance.py #{all ids} time-prediction
 To print the table to screen:
 python finetuning_hon_performance.py #{all ids} time-prediction --classifier svc --table 7
 
-Table 8
-=======
+#Table 8
 When using 1-NN as a classifier, we still use the same features as above, so we can go directly to evaluating
 
 To print the table to screen:
 python finetuning_hon_performance.py #{all ids} time-prediction --classifier knn --table 8
 
-Table 9 & 10	
-============
+#Table 9 & 10	
 These belong to the same experiment, finetune-time
 For extracting features, run extract_features_finetune_time.py
 
