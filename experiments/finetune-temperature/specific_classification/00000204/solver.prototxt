@@ -1,0 +1,13 @@
+test_iter: 100
+test_interval: 1000
+base_lr: 1e-09
+display: 20
+max_iter: 100000
+lr_policy: "step"
+gamma: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+stepsize: 20000
+snapshot: 2000
+snapshot_prefix: "/home/voanna/TimePrediction/experiments/2016-02-22-hon-lower-lr/00000204/model"
+net: "/home/voanna/TimePrediction/experiments/2016-02-22-hon-lower-lr/00000204/hon_vgg_train_val.prototxt"
