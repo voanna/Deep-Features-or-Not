@@ -1,6 +1,5 @@
-README
-This repo contains the code used to run the experiments in "Deep Features or Not: Temperature and Time Prediction in Outdoor Scenes" by Anna Volokitin, Radu Timofte and Luc Van Gool, published in the CVPR 2016 Workshop on Robust Features
-http://www.vision.ee.ethz.ch/~timofter/publications/Volokitin-CVPRW-2016.pdf
+# README
+This repo contains the code used to run the experiments in ["Deep Features or Not: Temperature and Time Prediction in Outdoor Scenes"](http://www.vision.ee.ethz.ch/~timofter/publications/Volokitin-CVPRW-2016.pdf) by Anna Volokitin, Radu Timofte and Luc Van Gool, published in the CVPR 2016 Workshop on Robust Features.
 
 We provide instructions on how to reproduce the tables in the paper
 
